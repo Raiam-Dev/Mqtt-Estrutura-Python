@@ -17,4 +17,4 @@ class MqttClientConnection:
         client.on_message = on_message
 
         client.connect_async(host=self.broker, port=self.porta, keepalive=self.keepalive)
-        client.loop_forever()
+        client.loop_start()
